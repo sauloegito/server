@@ -9,11 +9,7 @@ const connectionsController = new ConnectionsController();
 routes.get('/classes', classesController.index);
 routes.post('/classes', classesController.create);
 
-// routes.get('/connections', connectionsController.index);
-routes.get('/connections', async (request, response) => {
-    console.log('rout conn', request);
-    return response.send();
-});
+routes.get('/connections', connectionsController.index);
 routes.post('/connections', connectionsController.create);
 
 export default routes;
